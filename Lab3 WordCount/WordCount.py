@@ -1,4 +1,5 @@
 import os
+import time
 
 
 def TextInputFormat(path: str) -> list:
@@ -82,5 +83,8 @@ def Reduce(map_result: list) -> dict:
 
 if __name__ == '__main__':
     folder_name = 'hadoop'
+    starttime = time.time()
     result = Reduce(Map(folder_name))
-    print(result)
+    endtime = time.time()
+    print("使用的时间为: ", endtime - starttime)
+    # print(result)
